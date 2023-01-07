@@ -5,7 +5,7 @@ function solution(nums) {
     }
     let answer =  Object.keys(numsObj).length
     if(nums.length/2 < answer) answer = nums.length/2
-//     ddd    
+//     ddd    ㅇㅇㅇㅇ
     return answer;
 
 }
