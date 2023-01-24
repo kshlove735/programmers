@@ -1,16 +1,11 @@
 function solution(s) {
   let answer = [];
-  let obj = {};
-
-  // 처음 : -1
-  // 앞에 있있다면 : i - 최근 index
   for (let i = 0; i < s.length; i++) {
-    if (obj[s[i]] !== undefined) {
-      answer.push(i - obj[s[i]]);
-    } else {
-      answer.push(-1);
-    }
-    obj[s[i]] = i;
+    // if (s.substr(0, i).lastIndexOf(s[i]) !== -1) answer.push(i - s.substr(0, i).lastIndexOf(s[i]));
+    // else answer.push(s.substr(0, i).lastIndexOf(s[i]));
+
+    let a = s.substr(0, i).lastIndexOf(s[i]) !==-1 ? i-s.substr(0, i).lastIndexOf(s[i]) : s.substr(0, i).lastIndexOf(s[i])
+    answer.push(a)
   }
   return answer;
 }
