@@ -19,7 +19,7 @@ function solution(id_list, report, k) {
     }
   }
 
-  id_list.forEach(element => answer.push(idObj[element]))
+  answer = id_list.map(element => idObj[element])
 
   return answer;
 }
