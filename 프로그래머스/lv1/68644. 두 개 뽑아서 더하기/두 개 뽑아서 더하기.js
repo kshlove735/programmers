@@ -8,6 +8,6 @@ function solution(numbers) {
     }
   });
 
-  answer = Array.from(new Set(answer)).sort((a, b) => a - b);
+  answer = [...new Set(answer)].sort((a, b) => a - b);
   return answer;
 }
