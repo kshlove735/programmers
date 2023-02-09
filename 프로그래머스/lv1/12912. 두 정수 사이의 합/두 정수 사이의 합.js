@@ -1,8 +1,6 @@
 function solution(a, b) {
   let sum = 0
-  if (b < a) [b, a] = [a, b]
-
-  for (let i = a; i <= b; i++) {
+  for (let i = Math.min(a, b); i <= Math.max(a, b); i++) {
     sum += i
   }
   return sum;
