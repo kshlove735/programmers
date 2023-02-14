@@ -16,13 +16,8 @@ function solution(n, lost, reserve) {
       if (!set.has(ele + 1)) { set.add(ele + 1); continue; }
     }
 
-    if (lostObj[ele + 1]) {
-      if (!set.has(ele + 1)) { set.add(ele + 1); continue; }
-    }
-
-    if (lostObj[ele - 1]) {
-      if (!set.has(ele - 1)) { set.add(ele - 1); continue; }
-    }
+    if (lostObj[ele + 1] && !set.has(ele + 1)) { set.add(ele + 1); continue; }
+    if (lostObj[ele - 1] && !set.has(ele - 1)) { set.add(ele - 1); continue; }
   }
 
   for (let i = 1; i <= n; i++) {
