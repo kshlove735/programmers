@@ -22,9 +22,7 @@ function solution(n, words) {
   if (idx === 0) return [0, 0];
 
   // 탈락 idx 찾으면 
-  let reminder = (idx + 1) % n;
-  let div = Math.floor((idx + 1) / n)
-  let fail = reminder === 0 ? n : reminder
-  let count = fail === reminder ? div + 1 : div
+  let fail = idx % n + 1
+  let count = Math.floor(idx / n) + 1
   return [fail, count]
 }
