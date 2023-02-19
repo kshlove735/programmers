@@ -1,13 +1,12 @@
 function solution(s) {
-  let answer = true;
-
-  if (s.length % 2 !== 0) return false;
-
-  while (s.length > 0) {
-      if(s[0] !=='(') return false
-    let replace = s.replace(/\(\)/g, '')
-    if (s === replace) return false;
-      s=replace
+  let stack = []
+  for (let i = 0; i < s.length; i++) {
+    let cur = s[i]
+    stack.push(cur);
+    if (stack[stack.length - 2] === '(' && stack[stack.length - 1] === ')' && stack.length >= 2) {
+      stack.pop();
+      stack.pop()
+    }
   }
-  return answer;
+  return stack.length === 0 ? true : false
 }
