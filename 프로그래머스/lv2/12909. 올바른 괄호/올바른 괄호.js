@@ -1,12 +1,10 @@
 function solution(s) {
-  let stack = []
+  let result = 0;
   for (let i = 0; i < s.length; i++) {
     let cur = s[i]
-    stack.push(cur);
-    if (stack[stack.length - 2] === '(' && stack[stack.length - 1] === ')' && stack.length >= 2) {
-      stack.pop();
-      stack.pop()
-    }
+    cur === '(' ? result++ : result--
+    if (result < 0) return false
+
   }
-  return stack.length === 0 ? true : false
+  return result === 0 ? true : false
 }
