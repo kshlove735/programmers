@@ -1,8 +1,8 @@
 function solution(n) {
 
-  let fibArr = [0, 1]
+  let fibArr = [0n, 1n]
   for (let i = 2; i <= n; i++) {
-    fibArr[i] = (fibArr[i - 1] % 1234567 + fibArr[i - 2] % 1234567) % 1234567
+    fibArr[i] = (fibArr[i - 1] * 1n) + (fibArr[i - 2] * 1n)
   }
-  return fibArr[n];
+  return (fibArr[n] % 1234567n)
 }
