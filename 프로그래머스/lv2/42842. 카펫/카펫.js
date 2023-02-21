@@ -7,6 +7,7 @@ function solution(brown, yellow) {
       x = i;
       break;
     }
+    y = 0
   }
-  return x > y ? [x + 2, y + 2] : [y + 2, x + 2]
+  return [Math.max(x + 2, y + 2) , Math.min(x + 2, y + 2)]
 }
