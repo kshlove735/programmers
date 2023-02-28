@@ -10,5 +10,6 @@ function solution(s) {
     s = remove0.toString(2)
     countTransfer++;
   }
+    
   return [countTransfer, count0];
 }
