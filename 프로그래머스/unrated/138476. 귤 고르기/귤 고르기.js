@@ -1,5 +1,4 @@
 function solution(k, tangerine) {
-    let answer = 0;
     let obj = {}
     for (let i = 0; i < tangerine.length; i++) {
         obj[tangerine[i]] = (obj[tangerine[i]] | 0) + 1
