@@ -13,11 +13,11 @@ function solution(want, number, discount) {
     const divBy10 = discount.slice(i, i + 10);
 
     for (let j = 0; j < divBy10.length; j++) {
-      if (!check[divBy10[j]]) {
-        break;
-      } else {
+      if (check[divBy10[j]]) {
         check[divBy10[j]]--;
         if (check[divBy10[j]] === 0) delete check[divBy10[j]];
+      } else {
+        break;
       }
     }
 
