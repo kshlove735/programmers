@@ -15,8 +15,8 @@ function solution(want, number, discount) {
     for (let j = 0; j < divBy10.length; j++) {
       if (check[divBy10[j]]) {
         check[divBy10[j]]--;
-        if (check[divBy10[j]] < 0) break;
-        if (Object.values(check).every((v) => v === 0)) {
+        if (check[divBy10[j]] === 0) delete check[divBy10[j]];
+        if (Object.keys(check).length === 0) {
           answer++;
         }
       } else {
