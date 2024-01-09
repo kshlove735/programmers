@@ -16,13 +16,12 @@ function solution(want, number, discount) {
       if (check[divBy10[j]]) {
         check[divBy10[j]]--;
         if (check[divBy10[j]] === 0) delete check[divBy10[j]];
-        if (Object.keys(check).length === 0) {
-          answer++;
-        }
       } else {
         break;
       }
     }
+
+    if (Object.keys(check).length === 0) answer++;
   }
 
   return answer;
